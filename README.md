@@ -23,6 +23,7 @@ Welcome to my **#90DaysOfDevOps** portfolio repository! This space documents my 
 | **Day 04** | Linux Process & Service Diagnostics (`ps`, `systemctl`, `journalctl`) | [View Log](./2026/day-04/) | ✅ Completed |
 | **Day 05** | Linux Incident Troubleshooting & Live Runbooks | [View Log](./2026/day-05/) | ✅ Completed |
 | **Day 06** | Linux Fundamentals: Read and Write Text Files | [View Log](./2026/day-06/file-io-practice.md) | ✅ Completed |
+| **Day 07** | Linux File System Hierarchy & Scenario Practice | [View Log](./2026/day-07/day-07-linux-fs-and-scenarios.md) | ✅ Completed |
 
 ---
 
