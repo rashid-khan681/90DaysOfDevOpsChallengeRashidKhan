@@ -43,13 +43,13 @@ Understanding where system assets reside is critical for rapid incident diagnosi
 **Step 3:** Verify if the service is configured to auto-start on boot.
   ```bash
    systemctl is-enabled myapp
-   ```
+  ```
   Why: Determines if the unit file is missing boot-time enablement.
 
 **Step 4:** List all active services if myapp is missing.
   ```bash
    systemctl list-units --type=service
-   ```
+  ```
   Why: Confirms exact service naming syntax installed on the host.
 
 ### Scenario 2: High CPU Usage Investigation
@@ -58,7 +58,7 @@ Understanding where system assets reside is critical for rapid incident diagnosi
  **Step 1:** Inspect top CPU-consuming processes interactively.
    ```bash
     top
-    ```
+   ```
   Why: Displays real-time live resource usage breakdown sorted by %CPU.
 
  **Step 2:** Get a top-10 snapshot sorted by CPU usage.
