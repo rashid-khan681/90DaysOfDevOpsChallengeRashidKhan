@@ -5,7 +5,7 @@ Today's task focused on launching an AWS EC2 instance, establishing remote SSH c
 
 ---
 
-##️ Step-by-Step Execution & Screenshots
+## Step-by-Step Execution & Screenshots
 
 ### 1. Cloud Instance Access & System Setup
 Establish secure remote connection using SSH:
