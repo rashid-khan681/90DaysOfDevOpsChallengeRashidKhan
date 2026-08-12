@@ -55,13 +55,20 @@ scp -i ~/Downloads/devopsrashid.pem ubuntu@<YOUR_EC2_PUBLIC_IP>:~/nginx-logs.txt
 ## Challenges Faced & Solutions
 **Challenge:** Nginx installed and running successfully, but the web page was timing out on the browser using EC2 
 Public IP
+
 **Root Cause:** AWS Security Group inbound firewall rules only permitted SSH traffic on Port 22 by default.
+
 **Solution:** Navigated to AWS EC2 Security Groups -> Inbound Rules, added HTTP (Port 80) and Custom TCP (Port 8080)
 from 0.0.0.0/0.
 
 ## What I Learned
 **Cloud Provisioning:** Creating, managing, and connecting to AWS EC2 instances securely via SSH.
+
 **Network Security:** Configuring Security Groups to allow specific inbound web traffic.
+
 **Application Deployment:** Running web servers via native Linux services as well as isolated Docker containers.
+
 **Log Auditing:** Isolating log entries from /var/log/nginx/access.log and pulling them locally using scp.
+
+
 
