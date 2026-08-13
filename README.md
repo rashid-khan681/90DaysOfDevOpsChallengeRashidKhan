@@ -24,7 +24,7 @@ Welcome to my **#90DaysOfDevOps** portfolio repository! This space documents my 
 | **Day 05** | Linux Incident Troubleshooting & Live Runbooks | [View Log](./2026/day-05/) | ✅ Completed |
 | **Day 06** | Linux Fundamentals: Read and Write Text Files | [View Log](./2026/day-06/file-io-practice.md) | ✅ Completed |
 | **Day 07** | Linux File System Hierarchy & Scenario Practice | [View Log](./2026/day-07/day-07-linux-fs-and-scenarios.md) | ✅ Completed |
-
+| Day 08 | Cloud Server Setup: Docker, Nginx & Web Deployment | [View Log](./2026/day-08/day-08-cloud-deployment.md) | ✅ Completed |
 ---
 
 ## 🛠️ Key Technical Skills Demonstrated
@@ -32,3 +32,5 @@ Welcome to my **#90DaysOfDevOps** portfolio repository! This space documents my 
 - **Linux Administration:** File I/O operations (`>`, `>>`, `tee`), permission management (`chmod`, `chown`), process diagnostics (`ps`, `top`), service controls (`systemctl`), and system logging (`journalctl`).
 - **Version Control & Workflow:** Advanced Git practices including branching, interactive rebasing, multi-remote management (`origin` & `tws`), and PR synchronization.
 - **Documentation & Standards:** Production-ready markdown runbooks with exact execution commands and expected outputs.
+- **Cloud & Containerization:** AWS EC2 provisioning, SSH remote management, Inbound Security Group / Firewall rules, Docker container runtime
+    deployment, Nginx log analysis (`/var/log/nginx/access.log`), and remote file transfers (`scp`).
