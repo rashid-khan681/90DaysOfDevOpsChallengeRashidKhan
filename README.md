@@ -25,7 +25,7 @@ Welcome to my **#90DaysOfDevOps** portfolio repository! This space documents my 
 | **Day 06** | Linux Fundamentals: Read and Write Text Files | [View Log](./2026/day-06/file-io-practice.md) | ✅ Completed |
 | **Day 07** | Linux File System Hierarchy & Scenario Practice | [View Log](./2026/day-07/day-07-linux-fs-and-scenarios.md) | ✅ Completed |
 |**Day 08** | Cloud Server Setup: Docker, Nginx & Web Deployment | [View Log](./2026/day-08/day-08-cloud-deployment.md) |✅ Completed |
-| **Day 09** | Linux User & Group Management (RBAC) | [View Log](./2026/day-09/day-09-user-management.md) | ✅ Complet$
+| **Day 09** | Linux User & Group Management (RBAC) | [View Log](./2026/day-09/day-09-user-management.md) | ✅ Completed |
 ---
 
 ## 🛠️ Key Technical Skills Demonstrated
