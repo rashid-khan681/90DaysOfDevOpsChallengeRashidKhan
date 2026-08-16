@@ -27,6 +27,8 @@ Welcome to my **#90DaysOfDevOps** portfolio repository! This space documents my 
 |**Day 08** | Cloud Server Setup: Docker, Nginx & Web Deployment | [View Log](./2026/day-08/day-08-cloud-deployment.md) |✅ Completed |
 | **Day 09** | Linux User & Group Management (RBAC) | [View Log](./2026/day-09/day-09-user-management.md) | ✅ Completed |
 | **Day 10** | File Permissions & File Operations | [View Log](./2026/day-10/day-10-file-permissions.md) | ✅ Completed |
+| **Day 11** | Linux File Ownership (`chown` & `chgrp`) & RBAC | [View Log](./2026/day-11/day-11-file-ownership.md) | ✅ Completed |
+
 ---
 
 ## 🛠️ Key Technical Skills Demonstrated
@@ -39,3 +41,6 @@ Welcome to my **#90DaysOfDevOps** portfolio repository! This space documents my 
 - **Linux Security & RBAC:** User/Group provisioning (`useradd`, `usermod`) and permission hardening.
 - **Access Control:** Shared workspace configurations (`chgrp`, `chmod 775`) and cross-user privilege testing.
 - **File Permissions & Data Access:** Administered numeric (4-2-1) and symbolic permissions (`chmod`), explicit execution rights (`+x`), and safe file reading commands (`head`, `tail`, `vim -R`).
+* **Linux Security & RBAC:** Implemented Role-Based Access Control using File Ownership.
+* **Command Line Mastery:** Proficient in `chown`, `chgrp`, and recursive (`-R`) ownership management.
+* **Microservices Simulation:** Designed secure, multi-team access architectures (Bank Heist scenario).
