@@ -49,29 +49,29 @@ Identified the difference between an owner and a group in Linux using the `ls -l
 ![Understanding Ownership Concept](owners.png)
 
 ---
-
-##️ Step 2: Basic `chown` Operations
+️
+## Step 2: Basic `chown` Operations
 Created users `tokyo` and `berlin`. Changed the ownership of `devops-file.txt` from the default user to `tokyo`, and then transferred it to `berlin`.
 
 ![Basic chown Operations](chown.png)
 
 ---
 
-##️ Step 3: Basic `chgrp` Operations
+## Step 3: Basic `chgrp` Operations
 Created a new group called `heist-team`. Assigned the `team-notes.txt` file to this specific group so multiple team members can access it safely.
 
 ![Basic chgrp Operations](chgrp.png)
 
 ---
 
-##️ Step 4: Combined Owner & Group Change
+## Step 4: Combined Owner & Group Change
 Learned the time-saving colon (`:`) shortcut. Changed both the owner and the group of `project-config.yaml` and the `app-logs` directory in a single command (`chown owner:group`).
 
 ![Combined chown and chgrp](chown-combined.png)
 
 ---
 
-##️ Step 5: Recursive Ownership (`-R`)
+## Step 5: Recursive Ownership (`-R`)
 Created a complex project directory (`heist-project/`). Instead of changing file ownership one by one, used the `-R` (Recursive) flag to change the owner to `professor` and group to `planners` for all internal folders and files simultaneously.
 
 ![Recursive Ownership Change](chown-recursive.png)
