@@ -1,1 +1,0 @@
-Server health is 100% OK. No anomalies found.
