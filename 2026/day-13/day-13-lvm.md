@@ -5,7 +5,7 @@ Learn LVM to manage storage flexibly – create, extend, and mount volumes with 
 
 ---
 
-##️ Prerequisites & Setup (Virtual Disk)
+️## Prerequisites & Setup (Virtual Disk)
 
 **Command:**
 `sudo -i`
