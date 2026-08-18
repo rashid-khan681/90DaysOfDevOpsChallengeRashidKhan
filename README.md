@@ -28,6 +28,8 @@ Welcome to my **#90DaysOfDevOps** portfolio repository! This space documents my 
 | **Day 09** | Linux User & Group Management (RBAC) | [View Log](./2026/day-09/day-09-user-management.md) | ✅ Completed |
 | **Day 10** | File Permissions & File Operations | [View Log](./2026/day-10/day-10-file-permissions.md) | ✅ Completed |
 | **Day 11** | Linux File Ownership (`chown` & `chgrp`) & RBAC | [View Log](./2026/day-11/day-11-file-ownership.md) | ✅ Completed |
+| **Day 12** | Revision & Troubleshooting (RBAC, Systemctl, Logs) | [View Log](./2026/day-12/day-12-revision.md) | ✅ Completed |
+| **Day 13** | Linux Volume Management (LVM) - Zero Downtime Storage | [View Log](./2026/day-13/day-13-lvm.md) | ✅ Completed |
 
 ---
 
@@ -44,3 +46,6 @@ Welcome to my **#90DaysOfDevOps** portfolio repository! This space documents my 
 * **Linux Security & RBAC:** Implemented Role-Based Access Control using File Ownership.
 * **Command Line Mastery:** Proficient in `chown`, `chgrp`, and recursive (`-R`) ownership management.
 * **Microservices Simulation:** Designed secure, multi-team access architectures (Bank Heist scenario).
+- **Linux Administration & Diagnostics:** File I/O operations (`>`, `>>`, `tee`), permission management (`chmod`, `chown`), and process diagnostics (`systemctl`, `journalctl`).
+- **Linux Storage & LVM:** Architecting dynamic storage pools and performing zero-downtime live volume extensions (`pvcreate`, `vgcreate`, `lvextend`, `resize2fs`).
+- **Cloud & Advanced Version Control:** Nginx/Docker deployment, secure PR (Pull Request) syncs, and CLI Git workflows.
