@@ -30,6 +30,7 @@ Welcome to my **#90DaysOfDevOps** portfolio repository! This space documents my 
 | **Day 11** | Linux File Ownership (`chown` & `chgrp`) & RBAC | [View Log](./2026/day-11/day-11-file-ownership.md) | ✅ Completed |
 | **Day 12** | Revision & Troubleshooting (RBAC, Systemctl, Logs) | [View Log](./2026/day-12/day-12-revision.md) | ✅ Completed |
 | **Day 13** | Linux Volume Management (LVM) - Zero Downtime Storage | [View Log](./2026/day-13/day-13-lvm.md) | ✅ Completed |
+| **Day 14** | Networking Fundamentals & CLI Troubleshooting (OSI, DNS, Ports) | [View Log](./2026/day-14/day-14-networking.md) | ✅ Completed |
 
 ---
 
@@ -49,3 +50,4 @@ Welcome to my **#90DaysOfDevOps** portfolio repository! This space documents my 
 - **Linux Administration & Diagnostics:** File I/O operations (`>`, `>>`, `tee`), permission management (`chmod`, `chown`), and process diagnostics (`systemctl`, `journalctl`).
 - **Linux Storage & LVM:** Architecting dynamic storage pools and performing zero-downtime live volume extensions (`pvcreate`, `vgcreate`, `lvextend`, `resize2fs`).
 - **Cloud & Advanced Version Control:** Nginx/Docker deployment, secure PR (Pull Request) syncs, and CLI Git workflows.
+- **Network Troubleshooting (L3-L7):** Advanced CLI diagnostics mapping the OSI/TCP-IP models, verifying reachability, routing, and port binding using `ping`, `traceroute`, `ss`, `dig`, `netstat`, and `nc`.
