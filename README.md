@@ -31,6 +31,9 @@ Welcome to my **#90DaysOfDevOps** portfolio repository! This space documents my 
 | **Day 12** | Revision & Troubleshooting (RBAC, Systemctl, Logs) | [View Log](./2026/day-12/day-12-revision.md) | ✅ Completed |
 | **Day 13** | Linux Volume Management (LVM) - Zero Downtime Storage | [View Log](./2026/day-13/day-13-lvm.md) | ✅ Completed |
 | **Day 14** | Networking Fundamentals & CLI Troubleshooting (OSI, DNS, Ports) | [View Log](./2026/day-14/day-14-networking.md) | ✅ Completed |
+| **Day 15** | Introduction to Shell Scripting (Variables, I/O) | [View Log](./2026/day-15/) | ✅ Completed |
+| **Day 16** | Bash Conditional Statements (`if/elif/else`) | [View Log](./2026/day-16/) | ✅ Completed |
+| **Day 17** | Advanced Bash: Loops, Arguments & Error Handling | [View Log](./2026/day-17/day-17-scripting.md) | ✅ Completed |
 
 ---
 
@@ -51,3 +54,5 @@ Welcome to my **#90DaysOfDevOps** portfolio repository! This space documents my 
 - **Linux Storage & LVM:** Architecting dynamic storage pools and performing zero-downtime live volume extensions (`pvcreate`, `vgcreate`, `lvextend`, `resize2fs`).
 - **Cloud & Advanced Version Control:** Nginx/Docker deployment, secure PR (Pull Request) syncs, and CLI Git workflows.
 - **Network Troubleshooting (L3-L7):** Advanced CLI diagnostics mapping the OSI/TCP-IP models, verifying reachability, routing, and port binding using `ping`, `traceroute`, `ss`, `dig`, `netstat`, and `nc`.
+- **Bash Scripting & Automation:** Mastered variable operations, conditional logic (`if/else`), dynamic iteration (`for/while`), and command-line positional parameters (`$1`, `$@`).
+- **Resilient Deployments & Package Management:** Built automated `apt`/`dpkg` installer scripts enforcing fail-fast execution (`set -e`) and logical fallbacks (`||`).
