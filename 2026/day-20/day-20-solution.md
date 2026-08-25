@@ -206,12 +206,17 @@ echo "Success: Processed log file '$LOG_FILE' moved to '$ARCHIVE_DIR/' directory
 ## Tools & Commands Used
 
 **1. grep:** Used with -E for extended regular expressions to search for multiple keywords (ERROR or Failed). Used with -c to count matches and -n to output line numbers.
+
 **2. awk:** Used to manipulate columns. Specifically, awk '{$1=$2=$3=""; print}' nullified the Date, Time, and Level columns so only the core error message remained.
+
 **3. sed (Stream Editor):** Used for advanced text replacement. 
   - To format critical logs: sed 's/^\([0-9]*\):/Line \1: /'
   - To clean random trailing numbers from error messages: sed 's/ - [0-9]*$//'
+
 **4. sort & uniq:** Used in pipeline (sort | uniq -c | sort -rn) to group identical error messages, count their occurrences, and sort them in descending numerical order.
+ 
 **5. head:** Used as head -5 to limit the output to only the top 5 most frequent error messages.
+
 **6. tee:** A highly effective command used to write the report block to standard output (console) and append it to a file simultaneously.
 
 ---
@@ -219,7 +224,11 @@ echo "Success: Processed log file '$LOG_FILE' moved to '$ARCHIVE_DIR/' directory
 ## What I Learned (5 Key Points)
 
 **1. Advanced Data Extraction pipeline:** I learned how to chain commands (grep -> awk -> sed -> sort -> uniq) to take raw, messy log data and distill it into a clean, grouped, and mathematically sorted format.
+
 **2. Simultaneous Output with Tee:** Instead of writing multiple echo statements with standard redirection (>>), wrapping a block of code in {} and piping it to tee makes generating physical report files incredibly efficient and clean.
+
 **3. Data Cleaning with Sed:** Real-world logs have dynamic trailing data (like random transaction IDs). I learned that without cleaning that noise using sed regex replacements, grouping and counting with uniq will fail because every line appears strictly unique.
+
 **4. Handling Dynamic Variables in Bash:** Mastered the use of inline command execution like DATE=$(date +%Y-%m-%d) and TOTAL_LINES=$(wc -l < "$LOG_FILE") to create dynamic file names and extract clean numbers without filename artifacts.
+
 **5. Building Fail-Safe Architectures:** By implementing strict input validation (checking for arguments and file existence) and creating backup/archive directories dynamically with mkdir -p, I learned how to prevent scripts from failing in production environments.
