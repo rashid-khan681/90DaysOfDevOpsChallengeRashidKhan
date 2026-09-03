@@ -1,7 +1,7 @@
 # Day 27: GitHub Profile Makeover
 
 ## Before & After
-* **Before State:** *(Missed the screenshot before diving into CLI automation! 🛠️)* Previously, all scripts were buried deep inside 90 daily folders.
+* **Before State:** *(Missed the screenshot before diving into CLI automation!️)* Previously, all scripts were buried deep inside 90 daily folders.
 * **After State:** `after-profile.png` (Attached in folder) - Clean, categorized, and recruiter-ready.
 
 ## 3 Things I Improved & Why
