@@ -36,3 +36,4 @@
   * `gh release`: To automate tagging and publishing release artifacts.
   * `gh alias`: To map frequently used long commands to short custom shortcuts.
   * `gh search repos`: To query repositories across GitHub directly from the command line.
+## Live Terminal Test Check
