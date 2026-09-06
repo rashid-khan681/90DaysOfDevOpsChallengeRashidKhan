@@ -3,7 +3,7 @@
 Today, I deep-dived into the core of how Docker images are built, how they share space, and how to triage running containers directly from the host.
 
 ### Task 1: Docker Images & Size Comparison
-**Action:** Pulled `nginx`, `ubuntu`, and `alpine` images to compare their footprints. Investigated an image using `docker inspect` and forcefully removed a base image locked by a dead container (`docker rm -f` followed by `docker rmi`).
+**Action:** I pulled `nginx`, `ubuntu`, and `alpine` images to compare their footprints. Investigated an image using `docker inspect` and forcefully removed a base image locked by a dead container (`docker rm -f` followed by `docker rmi`).
 **Observation:** `alpine` is ~13MB compared to `ubuntu` (~160MB) because Alpine strips out heavy `glibc` libraries for a minimal `musl libc` environment, drastically reducing the attack surface.
 
 ![Task 1 - Image Size Comparison](./01-image-size-comparison.png)
@@ -15,7 +15,7 @@ Today, I deep-dived into the core of how Docker images are built, how they share
 ![Task 2 - Nginx Image Layers](./02-nginx-image-layers.png)
 
 ### Task 3: The Container Lifecycle
-**Action:** Manually transitioned a container through its complete lifecycle:
+**Action:** I manually transitioned a container through its complete lifecycle:
 1. `docker create` -> **Created** (Ready on disk, no CPU/RAM used)
 2. `docker start` -> **Up** (Process actively running)
 3. `docker pause` -> **Paused** (Frozen in RAM, 0% CPU usage)
