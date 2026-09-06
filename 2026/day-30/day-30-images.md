@@ -34,7 +34,7 @@ Today, I deep-dived into the core of how Docker images are built, how they share
 ![Task 4 - Live Triage & Exec](./04-live-triage.png)
 
 ### Task 5: System Cleanup
-**Action:** Automated the cleanup of the Docker environment to prevent disk space hoarding on the host machine.
+**Action:** I automated the cleanup of the Docker environment to prevent disk space hoarding on the host machine.
 - Stopped all running processes dynamically: `docker stop $(docker ps -q)`
 - Removed all dead containers: `docker rm $(docker ps -aq)`
 - Nuked all unused layers, caches, and images: `docker system prune -a --volumes`
