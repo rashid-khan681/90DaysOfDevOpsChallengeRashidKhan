@@ -1,4 +1,4 @@
-# Day 33 - Docker Compose: Multi-Container Basics 🚀
+# Day 33 - Docker Compose: Multi-Container Basics
 
 Yesterday, I spent time manually creating networks, provisioning volumes, and typing out long `docker run` commands to link containers. Today's goal? Automate all of that manual labor into a single YAML file using Docker Compose. 
 
