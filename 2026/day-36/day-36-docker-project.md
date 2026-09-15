@@ -68,7 +68,7 @@ The images were successfully built, tagged, and pushed to my public Docker Hub r
 *   **Frontend:** [rashidkhan6685/nexus-frontend](https://hub.docker.com/r/rashidkhan6685/nexus-frontend)
 
 **Final Image Sizes:**
-By using `node:22-alpine` and multi-stage builds, the frontend image was reduced significantly to under 199MB, and the backend to around 293MB.
+By using `node:22-alpine` and multi-stage builds, the frontend image was reduced significantly to under 299MB, and the backend to around 391MB.
 
 ---
 
