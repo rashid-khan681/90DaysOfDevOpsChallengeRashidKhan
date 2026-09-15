@@ -1,7 +1,10 @@
 # Day 36 – Docker Project: End-to-End Dockerization
 
 ## Task 1: Pick Your App
+**Project Repository:** [Nexus Prime Dashboard on GitHub](https://github.com/rashid-khan681/nexus-dashboard)
+
 **App Chosen:** Nexus Prime Dashboard (Full-Stack 3-Tier Application)
+
 **Why?** I chose this project because it represents a real-world, production-level architecture. It consists of a Next.js frontend, a Node.js/Express backend (with Socket.io for live telemetry), and a PostgreSQL database. It challenges me to handle multi-stage builds, internal networking, persistent volumes, and dynamic WebSocket routing in a containerized AWS EC2 environment.
 
 ![Nexus Prime Architecture](architecture-diagram.png)
