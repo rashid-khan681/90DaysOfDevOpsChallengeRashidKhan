@@ -41,7 +41,15 @@ I have marked this honestly based on my actual hands-on execution from Day 29 to
 - `COPY` strictly copies files/directories from the host into the container. `ADD` does the same but can also extract `.tar` archives and download from URLs. Best practice is to stick to `COPY` for predictable builds, which I used consistently in my Dockerfiles.
 
 **7. What does `-p 8080:80` mean?**
-- It dictates host-to-container Port Forwarding. It routes external traffic hitting Port `8080` on the EC2 host directly into Port `80` inside the container. I used this heavily to bypass host-level port conflicts.
+- The flag `-p 8080:80` tells Docker to forward traffic from a specific port on your host machine to a port inside the container. This process is called **port mapping** or **port publishing**.
+
+Here is the exact breakdown of how it works:
+* **`-p` (or `--publish`)**: This tells Docker that you want to open a network port so outside traffic can reach the container.
+* **`8080` (Host Port)**: The port on your *actual computer* (host machine) that you will connect to in your browser or app (e.g., `http://localhost:8080`).
+* **`80` (Container Port)**: The port that the application inside the Docker container is actively *listening on* (usually the default port for web servers like Nginx or Apache).
+
+When a request is made, it follows this exact path:
+`Your Browser ──> Host Machine (Port 8080) ──> Docker Bridge ──> Container (Port 80)`
 
 **8. How do you check how much disk space Docker is using?**
-- By running `docker system df`. When my 8GB AWS instance crashed with a `no space left on device` error during a heavy build, I used `docker system prune -a --volumes -f` to reclaim space instantly.
+- By running `docker system df` to see a high-level summary of the space used by images, containers, local volumes, and the build cache. For a deeper, itemized breakdown showing exactly which specific container or image is consuming space, we append the verbose flag: `docker system df -v`.
