@@ -1,7 +1,10 @@
 # Day 36 – Docker Project: End-to-End Dockerization
 
 ## Task 1: Pick Your App
+**Project Repository:** [Nexus Prime Dashboard on GitHub](https://github.com/rashid-khan681/nexus-dashboard)
+
 **App Chosen:** Nexus Prime Dashboard (Full-Stack 3-Tier Application)
+
 **Why?** I chose this project because it represents a real-world, production-level architecture. It consists of a Next.js frontend, a Node.js/Express backend (with Socket.io for live telemetry), and a PostgreSQL database. It challenges me to handle multi-stage builds, internal networking, persistent volumes, and dynamic WebSocket routing in a containerized AWS EC2 environment.
 
 ![Nexus Prime Architecture](architecture-diagram.png)
@@ -65,7 +68,7 @@ The images were successfully built, tagged, and pushed to my public Docker Hub r
 *   **Frontend:** [rashidkhan6685/nexus-frontend](https://hub.docker.com/r/rashidkhan6685/nexus-frontend)
 
 **Final Image Sizes:**
-By using `node:22-alpine` and multi-stage builds, the frontend image was reduced significantly to under 150MB, and the backend to around 120MB.
+By using `node:22-alpine` and multi-stage builds, the frontend image was reduced significantly to under 299MB, and the backend to around 391MB.
 
 ---
 
