@@ -52,10 +52,10 @@ I added a Python unit test (`tests/math_operations.py`) to the repository and cr
 I intentionally broke the logic to ensure the pipeline goes **Red (Failed)**, then fixed the logic to verify the pipeline goes **Green (Passed)**.
 
 *Proof of failing test run (Pipeline breaks as expected):*
-![Task 5a Test Fail](task-5a-test-fail.jpg)
+![Task 5a Test Fail](task-5a-test-fail.ppg)
 
 *Proof of passing test run (Pipeline fixed and green):*
-![Task 5b Test Pass](task-5b-test-pass.jpg)
+![Task 5b Test Pass](task-5b-test-pass.ppg)
 
 ---
 
