@@ -8,7 +8,7 @@ Today's pipeline starts doing real work — storing sensitive values securely, s
 I created a repository secret named `MY_SECRET_MESSAGE` and wrote a workflow to read and print it. GitHub automatically masked the direct output with `***`.
 
 **Question: Why should you never print secrets in CI logs?**
-**Answer:** You should never print secrets directly because anyone with read access to the repository's action logs can see them if masking fails, or it can be logged in third-party systems. Printing them directly in a bash command (`run: echo ${{ secrets.XYZ }}`) also opens up the risk of command injection.
+- **Answer:** You should never print secrets directly because anyone with read access to the repository's action logs can see them if masking fails, or it can be logged in third-party systems. Printing them directly in a bash command (`run: echo ${{ secrets.XYZ }}`) also opens up the risk of command injection.
 
 *Proof of GitHub masking the secret:*
 ![Task 1 Secrets](task-1-secrets.png)
@@ -37,7 +37,7 @@ I created a step that generates a `test-report.txt` file and used `actions/uploa
 I created a multi-job workflow where `Job 1` generates a file and uploads it, and `Job 2` (which depends on Job 1) downloads that artifact and prints its contents. 
 
 **Question: When would you use artifacts in a real pipeline?**
-**Answer:** Since every GitHub Actions job runs on a fresh, isolated virtual machine that gets destroyed after the job finishes, artifacts are crucial for:
+- **Answer:** Since every GitHub Actions job runs on a fresh, isolated virtual machine that gets destroyed after the job finishes, artifacts are crucial for:
 1. Passing built/compiled files (like `.jar`, `.exe`, or docker builds) from a Build Job to a Deploy Job.
 2. Saving test reports, code coverage, or error logs so developers can download and analyze them after the pipeline finishes.
 
@@ -63,7 +63,7 @@ I intentionally broke the logic to ensure the pipeline goes **Red (Failed)**, th
 I implemented `actions/cache@v4` to simulate caching dependencies. I ran it twice to observe the time difference between a cache-miss (downloading dependencies) and a cache-hit (restoring dependencies instantly).
 
 **Question: What is being cached and where is it stored?**
-**Answer:** Specific directories (like `node_modules` for Node.js or `~/.cache/pip` for Python) are zipped and cached. These files are stored securely on GitHub's internal cloud storage infrastructure. They are linked to a unique cache `key`, and if the key matches in future runs, GitHub restores the files directly to the runner VM, bypassing the internet download and saving time.
+- **Answer:** Specific directories (like `node_modules` for Node.js or `~/.cache/pip` for Python) are zipped and cached. These files are stored securely on GitHub's internal cloud storage infrastructure. They are linked to a unique cache `key`, and if the key matches in future runs, GitHub restores the files directly to the runner VM, bypassing the internet download and saving time.
 
 *Proof of Caching execution in the workflow:*
 ![Task 6 Caching](task-6-caching.png)
