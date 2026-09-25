@@ -71,7 +71,7 @@ Obtained the workflow status badge URL from the Actions tab and embedded it into
 Pulled the automated cloud-built image to the local machine and verified the application execution. Overcame the local Apple Silicon architecture mismatch by enforcing the `--platform linux/amd64` flag during extraction and execution.
 
 **Question: What is the full journey from git push to a running container?**
-**Answer:**
+- **Answer:**
 1. **Push:** A developer pushes code changes to the GitHub `main` branch.
 2. **Trigger:** GitHub Actions detects the push event and provisions an Ubuntu runner.
 3. **Checkout & Auth:** The runner checks out the source code, configures Docker Buildx, and authenticates with Docker Hub using repository secrets.
