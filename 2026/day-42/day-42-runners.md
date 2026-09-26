@@ -11,7 +11,7 @@ I created a workflow with 3 jobs (`ubuntu-latest`, `windows-latest`, `macos-late
 * **What is a GitHub-hosted runner?**
 - **Answer:** It is a temporary virtual machine provided by GitHub that spins up just to run your job and gets destroyed immediately after.
 * **Who manages it?**
-- **GitHub manages it completely.
+  - GitHub manages it completely.
 
 ---
 
