@@ -21,7 +21,8 @@ I ran a step on the `ubuntu-latest` runner to print the versions of Docker, Pyth
 ![Task 2 - Pre-installed Tools](./task-02-preinstalled.png)
 
 **Notes:**
-* **Why does it matter that runners come with tools pre-installed?** - It saves a lot of execution time. If we had to write commands to download and install tools like Node or Docker on every single pipeline run, it would make our CI/CD process very slow.
+* **Why does it matter that runners come with tools pre-installed?**
+  - It saves a lot of execution time. If we had to write commands to download and install tools like Node or Docker on every single pipeline run, it would make our CI/CD process very slow.
 
 ---
 
@@ -44,7 +45,8 @@ I added a custom label `my-linux-runner` to my EC2 self-hosted runner. Then, I u
 ![Task 5 - Targeted Label Run](./task-05-labels-run.png)
 
 **Notes:**
-* **Why are labels useful when you have multiple self-hosted runners?** - Labels help route specific jobs to the correct machines. If you have different servers (e.g., one for testing, one for database, one with a GPU), labels ensure the job runs exactly on the hardware it is meant for.
+* **Why are labels useful when you have multiple self-hosted runners?**
+  - Labels help route specific jobs to the correct machines. If you have different servers (e.g., one for testing, one for database, one with a GPU), labels ensure the job runs exactly on the hardware it is meant for.
 
 ---
 
