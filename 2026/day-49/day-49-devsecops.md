@@ -16,7 +16,7 @@ Added the Aqua Security Trivy action to the main branch pipeline to scan the Doc
     *   Since the pipeline was configured to fail only on CRITICAL (`exit-code: '1'`, `severity: 'CRITICAL'`), the image passed the check successfully.
 
 > **Screenshot of Trivy Scan Output:**
-> `![Trivy Scan](./task-1-trivy-scan.png)`
+![Trivy Scan](./task-1-trivy-scan.png)
 
 ---
 
@@ -30,7 +30,7 @@ Enabled Secret Scanning and Push Protection in the repository settings under Cod
   - If an AWS key is pushed, GitHub immediately notifies AWS via their Partner Program. AWS automatically attaches an `AWSCompromisedKeyQuarantineV2` policy to the IAM user/role to restrict high-risk operations (like spinning up EC2 instances) and notifies the account owner.
 
 > **Screenshot of Secret Scanning:**
-> `![Secret Scanning](./task-2-secret-scanning.png)`
+![Secret Scanning](./task-2-secret-scanning.png)
 
 ---
 
@@ -41,7 +41,7 @@ Added `actions/dependency-review-action@v4` to the PR workflow with `fail-on-sev
 *   This action specifically targets `pull_request` events. It checks any new dependencies (like pip or npm packages) introduced in the PR against a vulnerability database. If a developer attempts to introduce a critically vulnerable package, the check fails and blocks the PR from merging into the main branch.
 
 > **Screenshot of Dependency Review:**
-> `![Dependency Review](./task-3-dependency-review.png)`
+![Dependency Review](./task-3-dependency-review.png)
 
 ---
 
@@ -58,7 +58,7 @@ permissions:
   - Workflows should only have the exact access they require. If a compromised third-party GitHub Action has `write` access, an attacker could exploit it to silently push malicious code, alter releases, or steal repository secrets.
 
 > **Screenshot of Workflow Permissions:**
-> `![Permissions Check](./task-4-permissions.png)`
+> ![Permissions Check](./task-4-permissions.png)
 
 ---
 
