@@ -25,9 +25,9 @@ Enabled Secret Scanning and Push Protection in the repository settings under Cod
 
 **What I Learned:**
 *   **Secret Scanning vs. Push Protection:** 
-  - Secret scanning is a reactive measure that scans the repository's history and alerts administrators if secrets are found. Push protection is a proactive measure that intercepts the `git push` command and outright blocks the commit from reaching the repository if a supported secret is detected.
+      - Secret scanning is a reactive measure that scans the repository's history and alerts administrators if secrets are found. Push protection is a proactive measure that intercepts the `git push` command and outright blocks the commit from reaching the repository if a supported secret is detected.
 *   **Leaked AWS Key Handling:** 
-  - If an AWS key is pushed, GitHub immediately notifies AWS via their Partner Program. AWS automatically attaches an `AWSCompromisedKeyQuarantineV2` policy to the IAM user/role to restrict high-risk operations (like spinning up EC2 instances) and notifies the account owner.
+      - If an AWS key is pushed, GitHub immediately notifies AWS via their Partner Program. AWS automatically attaches an `AWSCompromisedKeyQuarantineV2` policy to the IAM user/role to restrict high-risk operations (like spinning up EC2 instances) and notifies the account owner.
 
 > **Screenshot of Secret Scanning:**
 ![Secret Scanning](./task-2-secret-scanning.png)
@@ -55,7 +55,7 @@ permissions:
 
 **My Notes:**
 *   **Why limit workflow permissions?** 
-  - Workflows should only have the exact access they require. If a compromised third-party GitHub Action has `write` access, an attacker could exploit it to silently push malicious code, alter releases, or steal repository secrets.
+      - Workflows should only have the exact access they require. If a compromised third-party GitHub Action has `write` access, an attacker could exploit it to silently push malicious code, alter releases, or steal repository secrets.
 
 > **Screenshot of Workflow Permissions:**
 > ![Permissions Check](./task-4-permissions.png)
