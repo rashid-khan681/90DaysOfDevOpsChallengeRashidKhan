@@ -115,11 +115,7 @@ Always active
 
 Beyond the standard requirements, I implemented a full-scale Master DevSecOps Pipeline (`devsecops_pipeline.yml`) utilizing `workflow_call` to orchestrate multiple advanced security stages:
 
-*   **SonarCloud SAST Integration:** 
-  - Integrated SonarQube scanning and resolved major Code Smells/Vulnerabilities.
-    *   **Fixed Script Injection (Rule S7630):** 
-      - Prevented shell script injection by securely mapping user-controlled variables (e.g., `github.head_ref`) to `env` blocks instead of injecting them directly into `run` bash blocks.
-*   **DAST via OWASP ZAP:** 
-  - Added dynamic testing (`dast.yml`) to scan the live AWS EC2 endpoint for vulnerabilities automatically post-deployment.
-*   **Resolved Deployment Blockers:** 
-  - Debugged and resolved complex EC2 runner issues, including Docker Socket (`docker.sock`) permission denials, Exit Code 127 (missing Ruff linter), and port binding conflicts.
+*   **SonarCloud SAST Integration:** Integrated SonarQube scanning and resolved major Code Smells/Vulnerabilities.
+    *   **Fixed Script Injection (Rule S7630):** Prevented shell script injection by securely mapping user-controlled variables (e.g., `github.head_ref`) to `env` blocks instead of injecting them directly into `run` bash blocks.
+*   **DAST via OWASP ZAP:** Added dynamic testing (`dast.yml`) to scan the live AWS EC2 endpoint for vulnerabilities automatically post-deployment.
+*   **Resolved Deployment Blockers:** Debugged and resolved complex EC2 runner issues, including Docker Socket (`docker.sock`) permission denials, Exit Code 127 (missing Ruff linter), and port binding conflicts.
