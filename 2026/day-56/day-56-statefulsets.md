@@ -31,8 +31,6 @@
     web-data-web-1   Bound    pvc-4c00959b-4bd3-445d-a0a6-760eced10434   100Mi      RWO            standard
     web-data-web-2   Bound    pvc-81126fab-f58d-410a-9868-1b913ab80c59   100Mi      RWO            standard
     ```
-*   **Task Proof (Screenshot):**
-    ![Task 3 - StatefulSet Pods and PVCs](./task-3-statefulset-pods-pvc.png)
 
 ### Task 4: Stable Network Identity
 *   **Verification Question:** Does the nslookup IP match the pod IP?
