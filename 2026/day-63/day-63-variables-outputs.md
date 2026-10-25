@@ -42,6 +42,7 @@ According to official Terraform documentation, Terraform loads variables in the 
 
 **Screenshot:**
 - `task-02-prod-plan.png` (Verification of prod.tfvars taking precedence).
+![Task-2](./task-02-prod-plan.png)
 
 ## Task 3: Add Outputs
 
@@ -61,6 +62,7 @@ Yes. Running `terraform output instance_public_ip` returned `"43.205.115.100"`, 
 **Screenshots:**
 - `task-03-apply-outputs.png` (Terminal output showing all 6 outputs post-apply).
 - `task-03-state-list.png` (Verification of state and JSON outputs).
+![Task-3](./task-03-state-list.png)
 
 ## Task 4: Use Data Sources
 
@@ -73,6 +75,7 @@ According to HashiCorp documentation:
 
 **Screenshot:**
 - `task-04-data-sources.png` (Verification of EC2 replacement with dynamic AMI).
+![Task-04](./task-04-data-sources.png)
 
 ## Task 5: Use Locals for Dynamic Values
 
@@ -107,7 +110,8 @@ instance_type = var.environment == "prod" ? "t3.small" : "t2.micro"
 **Screenshots:**
 - `task-05-conditional.png` (Plan output showing dynamic instance type change).
 - `task-05-destroy.png` (Successful reverse-order teardown of the infrastructure).
-
+![Task-05a](./task-05-conditional.png)
+![Task-05b](./task-05-destroy.png)
 ---
 
 ## Final Documentation Requirements
