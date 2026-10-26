@@ -13,16 +13,16 @@ Applied the existing AWS networking and compute configuration and inspected the 
     According to official HashiCorp documentation, the `serial` attribute is a version number for the state file. It increments on every state modification. Terraform uses this integer to ensure it does not accidentally overwrite a newer state file with an older one.
 
 **Screenshots:**
-- `task-01-state-list.png` (List of 11 tracked resources)
-- `task-01-state-show.png` (Deep dive into the EC2 instance attributes)
+- ![task-01-state-list.png](./task-01-state-list.png) (List of 11 tracked resources)
+- ![task-01-state-show.png](./task-01-state-show.png) (Deep dive into the EC2 instance attributes)
 
 ## Task 2: Set Up S3 Remote Backend
 
 Migrated the local `terraform.tfstate` to a remote AWS S3 backend. Utilizing Terraform 1.11+ best practices, native S3 state locking (`use_lockfile = true`) was implemented, bypassing the legacy DynamoDB requirement.
 
 **Screenshots:**
-- `task-03-bootstrap-bucket.png` (Creation of the secure S3 state bucket)
-- `task-04-state-migrated.png` (Successful migration confirmation in terminal)
+- ![task-03-bootstrap-bucket.png](./task-03-bootstrap-bucket.png) (Creation of the secure S3 state bucket)
+- ![task-04-state-migrated.png](./task-04-state-migrated.png) (Successful migration confirmation in terminal)
 
 ## Task 3: Test State Locking
 
@@ -38,7 +38,7 @@ Simulated a concurrent execution environment by running `terraform apply` in Ter
     According to Terraform documentation, state locking prevents others from acquiring the lock and potentially corrupting the state. In team environments or CI/CD pipelines, if multiple processes attempt to write to the state file concurrently, it can lead to state corruption, resource conflicts, and catastrophic infrastructure data loss.
 
 **Screenshot:**
-- `task-03-lock-error.png` (Terminal output showing the lock acquisition failure)
+- ![task-03-lock-error.png](./task-03-lock-error.png) (Terminal output showing the lock acquisition failure)
 
 ## Task 4: Import an Existing Resource
 
@@ -49,8 +49,8 @@ Manually provisioned an S3 bucket via AWS CLI (`terraweek-import-rashid-2026`) a
     According to HashiCorp documentation, standard resource creation involves Terraform calling cloud provider APIs to provision net-new infrastructure. The `import` function, conversely, maps an existing, already-provisioned cloud resource to a Terraform configuration block, bringing it under Terraform's management without recreating it.
 
 **Screenshots:**
-- `task-04-import-plan.png` (Execution of generate-config-out)
-- `task-04-import-list.png` (Verification of imported bucket in state list)
+- ![task-04-import-plan.png](./task-04-import-plan.png) (Execution of generate-config-out)
+- ![task-04-import-list.png](./task-04-import-list.png) (Verification of imported bucket in state list)
 
 ## Task 5: State Surgery -- mv and rm
 
@@ -65,7 +65,7 @@ Executed non-destructive state surgery commands.
     `state rm` is used to remove a resource binding from the Terraform state. The underlying physical cloud resource is not destroyed. This is critical when transitioning the management of a resource to another tool, another Terraform workspace, or manual management.
 
 **Screenshot:**
-- `task-05-state-surgery.png` (Execution of mv, sed, and rm commands)
+- ![task-05-state-surgery.png](./task-05-state-surgery.png) (Execution of mv, sed, and rm commands)
 
 ## Task 6: Simulate and Fix State Drift
 
@@ -76,7 +76,7 @@ Induced state drift by utilizing the AWS CLI to manually modify the `Name` tag o
     State drift is prevented by strictly enforcing the Principle of Least Privilege. Direct "write" access to production environments via the AWS Management Console or AWS CLI is revoked for human users. All infrastructure modifications are mandated to pass through version control (Git) and are exclusively deployed via automated CI/CD pipelines (e.g., GitHub Actions, Jenkins).
 
 **Screenshot:**
-- `task-06-state-drift.png` (Plan output detecting the tag divergence)
+- ![task-06-state-drift.png](./task-06-state-drift.png) (Plan output detecting the tag divergence)
 
 ---
 
