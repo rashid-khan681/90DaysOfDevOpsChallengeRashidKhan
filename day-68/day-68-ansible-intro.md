@@ -71,7 +71,8 @@ ansible all -i inventory.ini -m copy -a "src=hello.txt dest=/tmp/hello.txt"
 # 6. Verify file copy
 ansible all -i inventory.ini -m command -a "cat /tmp/hello.txt"
 ```
-## Day 68: Documentation
+
+# Day 68: Documentation
 
 ## 1. Ansible Architecture (In My Own Words)
 Ansible operates on a powerful, agentless architecture that relies on a push-based model. Here are the core components:
