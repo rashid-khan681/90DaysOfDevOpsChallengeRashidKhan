@@ -41,7 +41,7 @@ db-server ansible_host=13.232.247.238
 [all:vars]
 ansible_user=ec2-user
 ansible_ssh_private_key_file=./ansible-lab-key.pem
-
+```
 ## Task 5: Run Ad-Hoc Commands
 
 **What does `--become` do?**
@@ -70,7 +70,7 @@ ansible all -i inventory.ini -m copy -a "src=hello.txt dest=/tmp/hello.txt"
 
 # 6. Verify file copy
 ansible all -i inventory.ini -m command -a "cat /tmp/hello.txt"
-
+```
 ## Day 68: Documentation
 
 ## 1. Ansible Architecture (In My Own Words)
