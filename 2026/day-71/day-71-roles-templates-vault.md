@@ -13,7 +13,7 @@ Yes. The output of the `cat /etc/nginx/conf.d/terraweek-app.conf` command showed
 
 An Ansible role has a fixed directory structure. I generated a skeleton role named `webserver` using the `ansible-galaxy init roles/webserver` command and inspected the directory tree.
 
-![Task 2 Role Skeleton](task-2-role-skeleton.png)
+![Task 2 Role Skeleton](./screenshots/task-2-role-skeleton.png)
 
 **Document: What is the difference between vars/main.yml and defaults/main.yml?**
 According to Ansible documentation on variable precedence:
@@ -24,7 +24,7 @@ According to Ansible documentation on variable precedence:
 
 I built a complete custom webserver role from scratch by populating the `defaults/main.yml`, `tasks/main.yml`, `handlers/main.yml`, and `templates/` directories. The tasks included installing Nginx, deploying the configuration and vhost templates, creating the web root, deploying an `index.html` template, and starting the service. I then called this role from a master playbook `site.yml`. A Terraform security group update was required to open port 80 to allow HTTP traffic.
 
-![Task 3 Custom Role Configuration](task-3-custom-role.png)
+![Task 3 Custom Role Configuration](./screenshots/task-3-custom-role.png)
 
 **Verification:** Curl the web server. Does the custom page load?
 Yes. Executing `curl http://<web-server-public-ip>` successfully returned the rendered HTML content: `<h1>terraweek-app</h1><p>Host: ip-172-31-14-42 | IP: 172.31.14.42</p>`, confirming the custom role deployed and started the Nginx service correctly.
@@ -33,7 +33,7 @@ Yes. Executing `curl http://<web-server-public-ip>` successfully returned the re
 
 I utilized Ansible Galaxy to manage community-built roles. I searched for available roles, installed `geerlingguy.docker`, and verified its installation using `ansible-galaxy list`. Finally, I created a `requirements.yml` file to define required roles and versions, and installed them in a single batch.
 
-![Task 4 Ansible Galaxy](task-4-ansible-galaxy.png)
+![Task 4 Ansible Galaxy](./screenshots/task-4-ansible-galaxy.png)
 
 **Document: Why use a requirements.yml instead of installing roles manually?**
 Using a `requirements.yml` file is standard practice for Infrastructure as Code (IaC). It acts as a manifest that tracks external dependencies. Instead of remembering or manually typing out multiple `ansible-galaxy install` commands across different environments, a single `ansible-galaxy install -r requirements.yml` command ensures that all required roles, pinned to specific versions, are consistently downloaded. This is critical for reproducibility, especially in CI/CD pipelines and when sharing code with other team members.
@@ -42,7 +42,7 @@ Using a `requirements.yml` file is standard practice for Infrastructure as Code 
 
 To prevent sensitive data like database passwords and API keys from being exposed in plain text within version control, I used Ansible Vault. I created an encrypted file `group_vars/db/vault.yml`, viewed its encrypted state, and created a playbook to utilize the decrypted variables at runtime.
 
-![Task 5 Ansible Vault](task-5-ansible-vault.png)
+![Task 5 Ansible Vault](./screenshots/task-5-ansible-vault.png)
 
 **Document: Why is --vault-password-file better than --ask-vault-pass for automated pipelines?**
 `--ask-vault-pass` forces Ansible to prompt the user interactively in the terminal to type the password. This blocks execution until human input is provided, which makes it impossible to use in automated CI/CD pipelines (like Jenkins or GitHub Actions) where no human is present to type the password. `--vault-password-file` allows Ansible to read the password directly from a secure file automatically, enabling non-interactive, fully automated deployments while keeping the vault data encrypted at rest.
@@ -51,7 +51,7 @@ To prevent sensitive data like database passwords and API keys from being expose
 
 I wrote a comprehensive `site.yml` master playbook that combined all concepts. It configured the `web` group using the custom `webserver` role, the `app` group using the Galaxy `geerlingguy.docker` role (customized for Amazon Linux 2023 by overriding variables), and the `db` group using a Jinja2 template that injected Vault-encrypted secrets.
 
-![Task 6 Combined Playbook](task-6-combined-playbook.png)
+![Task 6 Combined Playbook](./screenshots/task-6-combined-playbook.png)
 
 **Verification:** SSH into the db server and check /etc/db-config.env. Are the secrets rendered correctly? Is the file permission 600?
 Yes. The `sudo cat /etc/db-config.env` command on the database server revealed that the `vault_db_password` and `vault_db_root_password` variables were successfully decrypted and injected into the file. The `template` task specifically set the mode to `0600`, ensuring only the root user has read and write access to these secrets.
