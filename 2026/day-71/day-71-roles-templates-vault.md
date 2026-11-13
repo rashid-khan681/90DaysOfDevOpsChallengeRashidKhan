@@ -4,7 +4,7 @@
 
 Templates let you generate config files dynamically using variables and facts. I created a Jinja2 template `templates/nginx-vhost.conf.j2` and a playbook `template-demo.yml` to deploy it. The playbook was run with the `--diff` flag to observe the exact changes applied to the configuration file before execution.
 
-![Task 1 Jinja Template Diff](task-1-jinja-template-diff.png)
+![Task 1 Jinja Template Diff](./screenshots/task-1-jinja-template-diff.png)
 
 **Verification:** SSH into the web server and read the generated config. Are the variables replaced with actual values?
 Yes. The output of the `cat /etc/nginx/conf.d/terraweek-app.conf` command showed that variables were successfully replaced. `{{ http_port | default(80) }}` rendered as `80`, `{{ ansible_hostname }}` rendered as the actual AWS internal hostname `ip-172-31-14-42`, and `{{ app_name }}` rendered as `terraweek-app`.
