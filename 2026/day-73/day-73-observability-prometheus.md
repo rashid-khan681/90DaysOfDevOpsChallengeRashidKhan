@@ -80,7 +80,7 @@ rate(prometheus_http_requests_total{code!="200"}[5m])
 
 **Task 3 & 4 Proof (Challenge Query Execution):**
 
-![Prometheus Querries] (./screenshots/task-3-prometheus-queries.png)
+![Prometheus Querries](./screenshots/task-3-prometheus-queries.png)
 ![PromQL Challenge Execution](./screenshots/task-4-promql-challenge.png)
 
 ## Task 5: Add a Sample Application as a Scrape Target
